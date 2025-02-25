@@ -40,7 +40,7 @@ def load_data(bounds):
     query={"eo:cloud_cover":{"lt":10},"platform": {"in": ["landsat-8"]}} #Condition to filter images with less than 10% of cloud coverage
     )
 
-    resolution = 30 #Meter that represents each pixel in the images
+    resolution = 10 #Meter that represents each pixel in the images
     scale = resolution / 111320.0 #Convert into degree (Format to be used for loading the image later)
 
     data1, data2= search1_func(search1, scale , bounds), search2_func(search2, scale , bounds)
